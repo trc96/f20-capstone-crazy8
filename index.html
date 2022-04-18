@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- the line above works for heroku deployment, the line below works for liveserver -->
+    <link rel="stylesheet" href="public/styles.css">
+    <title>8ball</title>
+</head>
+<body>
+    <div class="header-banner">
+        <img class="tclogo" src="assets/tc.edited-removebg.png" alt="a logo that is made from the letters 'T' and 'C'">
+        <h1 class="title">Crazy 8</h1>
+    </div>
+    <div class="main">
+        <input class="user-question-input" id="userQuestion" type="text">
+        <input class="eightball-button" type="image" src="assets/eightball-icon.edited-removebg.png" alt="an eightball image">
+        <input class="eightball-response-input" id="eightballResponse" type="text">
+        <!-- <img class="eightball" src="assets/eightball-icon.edited-removebg.png" alt="an eightball"> -->
+        <!-- <button class="eightball-button" type="submit"></button> -->
+        <!-- <h3>Click Me</h3> -->
+    </div>
+    <div class="footer-banner" id="saved-container">
+        <h2>Saved Responses</h2>
+            <!-- <li class="user-question" id="userQuestion">Q:</li>
+            <li class="eightball-response" id="eightballResponse">A:</li> -->
+    </div>
+
+
+
+    <!-- <script src="main.js"></script> -->
+    <!-- the line above works for heroku deployment, the line below works for liveserver -->
+    <script src="public/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
