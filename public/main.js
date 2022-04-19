@@ -1,9 +1,9 @@
 // const { default: axios } = require("axios")
 
 const savedContainer = document.querySelector('#saved-container')
-const form = document.querySelector('form')
+const button = document.querySelector('#eightball')
 
-const baseURL = `http://localhost:5500`
+const baseURL = `http://localhost:5500/`
 
 const savedCallBack = ({ data: saved }) => displaySaved(saved)
 const errCallBack = err => console.log(err)
@@ -32,45 +32,53 @@ function createSavedCard(saved) {
     const savedCard = document.createElement('div')
     savedCard.classList.add('saved-card')
 
-    savedCard.innerHTML = `<li class="user-question" id="userQuestion">Q: ${saved.userQuestion}</li>
-    <li class="eightball-respose" id="eightballResponse">A: ${saved.eightballResponse}</li>`
+    savedCard.innerHTML = `<h2 class="user-question" id="userQuestionSaved" style="color: #084c61">Q: ${saved.userQuestion}</h2>
+    <h2 class="eightball-respose" id="eightballResponseSaved" style="color: #084c61">A: ${saved.eightballResponse}</h2>`
 
-    savedContainer.appendChild(savedCard)
+    // savedContainer.appendChild(savedCard)
+
+    if (userQuestion.value.length === 0) {
+        
+    } else {
+        savedContainer.appendChild(savedCard)
+    }
 }
 
-function createRepsonse() {
+function createResponse() {
 
     let userQuestion = document.querySelector('#userQuestion')
-
     let eightballResponse = document.querySelector('#eightballResponse')
 
-    let responses = {
-        1: 'It is certain.',
-        2: 'Without a doubt.',
-        3: 'You may rely on it.',
-        4: 'Yes definitely.',
-        5: 'It is decidely so.',
-        6: 'As I see it, yes.',
-        7: 'Most likely.',
-        8: 'Yes',
-        9: 'Outlook good.',
-        10: 'Signs point to yes.',
-        11: 'Reply hazy, try again.',
-        12: 'Better not tell you now.',
-        13: 'Ask again later.',
-        14: 'Cannot predict now.',
-        15: 'Concentrate and ask again.',
-        16: `Don't count on it.`,
-        17: 'Outlook not so good.',
-        18: 'My sources say no.',
-        19: 'Very doubtful.',
-        20: 'My reply is no.'
-    }
+    let responses = [
+        'It is certain.',
+        'Without a doubt.',
+        'You may rely on it.',
+        'Yes definitely.',
+        'It is decidedly so.',
+        'As I see it, yes.',
+        'Most likely.',
+        'Yes',
+        'Outlook good.',
+        'Signs point to yes.',
+        'Reply hazy, try again.',
+        'Better not tell you now.',
+        'Ask again later.',
+        'Cannot predict now.',
+        'Concentrate and ask again.',
+        `Don't count on it.`,
+        'Outlook not so good.',
+        'My sources say no.',
+        'Very doubtful.',
+        'My reply is no.'
+    ]
 
-    if (userQuestion != '') {
-        alert('You need to at least ask a question first...')
+    let randomIndex = Math.floor(Math.random() * responses.length)
+    window.randomResponse = responses[randomIndex]
+
+    if (userQuestion.value.length == 0) {
+        alert('You need to at least ask a question...')
     } else {
-        eightballResponse = Math.random(responses)
+        eightballResponse.value = randomResponse
     }
 }
 
@@ -81,7 +89,8 @@ function displaySaved(arr) {
     }
 }
 
-form.addEventListener('submit', submitHandler)
-document.addEventListener('onclick', createRepsonse)
+document.addEventListener('submit', submitHandler)
+button.addEventListener('click', createResponse)
+button.addEventListener('click', createSavedCard)
 
-getAllSaved()
+// getAllSaved()

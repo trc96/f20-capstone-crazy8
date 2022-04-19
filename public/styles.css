@@ -60,7 +60,7 @@ h1 {
 } */
 
 .eightball-button {
-    height: 50vh;
+    height: 30vh;
     width: auto;
     align-self: center;
     background-image: image();
@@ -83,8 +83,10 @@ h1 {
 }
 
 h2 {
+    display: flex;
     color: white;
     font-size: xx-large;
+    justify-content: center;
 }
 
 li {
@@ -103,19 +105,20 @@ body {
 }
 
 #saved-container {
-    /* display: flex; */
+    display: flex;
     /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .saved-card {
-    background-color: turquoise;
-    width: 300px;
+    background-color: #edcb96;
+    width: 60%;
     margin: 20px; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     border-radius: 12px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;

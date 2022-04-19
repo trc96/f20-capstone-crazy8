@@ -15,15 +15,27 @@
         <h1 class="title">Crazy 8</h1>
     </div>
     <div class="main">
-        <input class="user-question-input" id="userQuestion" type="text">
-        <input class="eightball-button" type="image" src="assets/eightball-icon.edited-removebg.png" alt="an eightball image">
-        <input class="eightball-response-input" id="eightballResponse" type="text">
+        <input 
+            class="user-question-input" 
+            id="userQuestion" 
+            type="text" 
+            placeholder="Enter your question here...">
+        <input 
+            class="eightball-button" 
+            id="eightball" 
+            type="image" 
+            src="assets/eightball-icon.edited-removebg.png" 
+            alt="an eightball image">
+        <input 
+            class="eightball-response-input" 
+            id="eightballResponse" 
+            type="text">
         <!-- <img class="eightball" src="assets/eightball-icon.edited-removebg.png" alt="an eightball"> -->
         <!-- <button class="eightball-button" type="submit"></button> -->
         <!-- <h3>Click Me</h3> -->
     </div>
+    <h2>Saved Responses</h2>
     <div class="footer-banner" id="saved-container">
-        <h2>Saved Responses</h2>
             <!-- <li class="user-question" id="userQuestion">Q:</li>
             <li class="eightball-response" id="eightballResponse">A:</li> -->
     </div>
@@ -32,7 +44,7 @@
 
     <!-- <script src="main.js"></script> -->
     <!-- the line above works for heroku deployment, the line below works for liveserver -->
-    <script src="public/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="public/main.js"></script>
 </body>
 </html>
