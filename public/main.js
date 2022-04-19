@@ -1,5 +1,3 @@
-// const { default: axios } = require("axios")
-
 const savedContainer = document.querySelector('#saved-container')
 const button = document.querySelector('#eightball')
 
@@ -32,10 +30,8 @@ function createSavedCard(saved) {
     const savedCard = document.createElement('div')
     savedCard.classList.add('saved-card')
 
-    savedCard.innerHTML = `<h2 class="user-question" id="userQuestionSaved" style="color: #084c61">Q: ${saved.userQuestion}</h2>
-    <h2 class="eightball-respose" id="eightballResponseSaved" style="color: #084c61">A: ${saved.eightballResponse}</h2>`
-
-    // savedContainer.appendChild(savedCard)
+    savedCard.innerHTML = `<h2 class="user-question" id="userQuestionSaved" style="color: #084c61">Q: ${userQuestion.value}</h2>
+    <h2 class="eightball-respose" id="eightballResponseSaved" style="color: #084c61">A: ${eightballResponse.value}</h2>`
 
     if (userQuestion.value.length === 0) {
         
@@ -89,8 +85,18 @@ function displaySaved(arr) {
     }
 }
 
+function inputClear() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            document.getElementById('userQuestion').value = '';
+            document.getElementById('eightballResponse').value = '';
+            resolve('resolved');
+        }, 1000);
+    });
+}
+
 document.addEventListener('submit', submitHandler)
 button.addEventListener('click', createResponse)
 button.addEventListener('click', createSavedCard)
 
-// getAllSaved()
+button.addEventListener('click', inputClear)

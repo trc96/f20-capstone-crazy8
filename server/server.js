@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
-// const saved = require('./db.json')
 
 const app = express()
 
@@ -24,12 +23,10 @@ app.post('/', (req, res) => {
     let newQuestion = {
         userQuestion,
         eightballResponse,
-        // id
     }
 
     saved.push(newQuestion)
     res.status(200).send(saved)
-    // id++
 })
 
 const PORT = process.env.PORT || 5500
