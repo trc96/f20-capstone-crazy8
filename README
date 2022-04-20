@@ -4,4 +4,13 @@ that question, and then that will be saved at the bottom of the page in a "card"
 the page is refreshed. The web page has a header, main body, and a footer that expands 
 with additional cards put in.
 
-The main part of the web page 
+To use this webpage, you will need to enter a question where the placeholder text
+intstructs you to. Then click the eightball and it will generate a random response in
+the bottom input field that will disapear after 2000ms. Once they disapear, a card will
+be generated at the bottom of the page with the question asked and the response generated.
+
+Stack:
+HTML, CSS, Javascript, Node.js, JSON, Express, Cors, Axios
+
+Screen Shots:
+Check Project Screenshots Folder
