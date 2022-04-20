@@ -1,0 +1,7 @@
+This project was inspired by an example from the capstone project instructions. 
+My MVP was to allow users can enter a question, they will get a randomized response to 
+that question, and then that will be saved at the bottom of the page in a "card" until 
+the page is refreshed. The web page has a header, main body, and a footer that expands 
+with additional cards put in.
+
+The main part of the web page 

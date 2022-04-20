@@ -9,12 +9,15 @@ h1 {
     margin-bottom: 5vh;
     margin-top: 2vh;
     font-size: 400%;
+    justify-content: center;
+    align-self: center;
 }
 
 .tclogo {
     height: 10vh;
     width: auto;
     opacity: 50%;
+    position: fixed;
 }
 
 .main {
